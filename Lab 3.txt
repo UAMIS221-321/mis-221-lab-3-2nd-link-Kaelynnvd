@@ -1,0 +1,45 @@
+
+// Main
+
+double enjoymentLevel = GetEnjoymentLevel();
+string stadiumRecommendation = GetGameRecommendations(enjoymentLevel);
+DisplayStadiumDetails(enjoymentLevel, stadiumRecommendation);
+
+// End Main
+
+// Method to get user's enjoyment level
+static double GetEnjoymentLevel(){
+    System.Console.WriteLine("What is your preferred level of enjoyment?");
+    return Console.ReadLine(); 
+}
+
+// Method to recommend stadium based on enjoyment level
+static string GetGameRecommendations(string enjoymentLevel){
+    if (enjoymentLevel == "Boring") {
+        return "Neyland Stadium vs Kent State";
+    }
+    else if (enjoymentLevel == "Average") {
+        return "Jordan-Hare Stadium vs Kentucky";
+    }
+    else if (enjoymentLevel == "Fun") {
+        return "Tiger Stadium vs Alabama";
+    }
+    else if (enjoymentLevel == "Epic") {
+        return "Saban field at Bryant-Denny Stadium vs Auburn";
+    }
+    else {
+        return "That is an invalid input";
+    }
+}
+
+// Method to display stadium and enjoyment details
+static void DisplayStadiumDetails(string enjoymentLevel, string gameRecommendation){
+    Console.Clear();
+    System.Console.WriteLine($"You inputted an enjoyment level of {enjoymentLevel}, and the best game to attend is: {gameRecommendation}");
+}
+
+
+
+ 
+ 
+   
